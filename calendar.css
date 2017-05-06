@@ -1,0 +1,93 @@
+#calendar{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 40px;
+
+}
+body{
+  background-image: url(ep_naturalwhite.png);
+}
+fieldset{
+  border-radius: 10px;
+}
+legend{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+th{
+  width: 150px;
+  text-align: center;
+}
+td{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid black;
+}
+
+fieldset{
+  text-align: center;
+  height: 900px;
+}
+.notthismonth{
+  color: #bbb5b5;
+}
+.events{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: -1px;
+}
+#login_signup{
+  text-align: center;
+  position: absolute;
+  top: 42%;
+  left: 42%;
+}
+#login_signup input{
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 25px;
+}
+#next_month_btn{
+  position: absolute;
+  right: 0%;
+}
+#addevent{
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+.entertainment, #entertainment_btn{
+  background-color: #b5a397;
+}
+.work, #work_btn{
+  background-color: #62bcfa;
+}
+.personal, #personal_btn{
+  background-color: #fccdd3;
+}
+.other, #other_btn{
+  background-color: #bbc4ef;
+}
+#tag_btns{
+  position: absolute;
+  left: 20%;
+  width: 80%;
+}
+.tags_btn{
+  margin-left: 4%;
+  width: 115px;
+}
+#logout{
+  text-align: right;;
+}
+#jump{
+  position: absolute;
+  left: 40%;
+}
+#jump_date{
+  font-size: 19px;
+position: relative;
+top: 3px;
+}

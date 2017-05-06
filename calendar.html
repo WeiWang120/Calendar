@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calendar</title>
+    <script src="calendar.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="calendar.css" type="text/css">
+  </head>
+  <body>
+
+    <!-- token -->
+    <input type="hidden"  id="token">
+
+
+    <!-- log in -->
+    <div id="login_signup">
+      <input type="text" id="username" placeholder="Username" />
+      <br>
+      <input type="password" id="password" placeholder="Password" />
+      <br>
+      <button id="login_btn" class="btn btn-primary">Log In</button>
+      <button id="signup_btn" class="btn btn-primary">Sign Up</button>
+      <button id="visitor_btn" class="btn btn-primary">Visitor</button>
+    </div>
+
+
+
+
+
+    <!-- The calendar display -->
+    <div id="main" hidden="hidden">
+      <span id="currenttime"></span>
+      <span id="jump"><input type="text" id="jump_date" placeholder="yyyy-mm"><button type="button" class="btn" id="jump_btn"><span id="text">Go</span></button></span>
+      <div id="logout" hidden="hidden">
+        <button id='logout_btn' class="btn btn-primary">Log out</button>
+      </div>
+      <button id="last_month_btn" class="btn btn-success" type="button" name="button">Last Month</button>
+      <span id="tag_btns">
+        <button id="entertainment_btn" class="btn tags_btn" type="button" name="button">Entertainment</button>
+        <button id="work_btn" class="btn tags_btn" type="button" name="button">Work</button>
+        <button id="personal_btn" class="btn tags_btn" type="button" name="button">Personal</button>
+        <button id="other_btn" class="btn tags_btn" type="button" name="button">Other</button>
+        <button id="allevent_btn" class="btn tags_btn" type="button" name="button">All</button>
+      </span>
+      <button id="next_month_btn" class="btn btn-success" type="button" name="button">Next Month</button>
+      <fieldset>
+        <legend id="legend"></legend>
+        <table id="calendar">
+        </table>
+      </fieldset>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <!-- add event here -->
+    <div id="addevent" hidden="hidden">
+      New Event: <span id="date"></span>
+      <br>
+      <textarea id="title" rows="8" cols="80" placeholder="Your event here"></textarea>
+      <div id="adiobuttons">
+        <input type="radio" class="tag_radio" name="tag" value="entertainment"> Entertainment &nbsp;
+        <input type="radio" class="tag_radio" name="tag" value="work"> Work &nbsp;
+        <input type="radio" class="tag_radio" name="tag" value="personal"> Personal &nbsp;
+        <input type="radio" class="tag_radio" name="tag" value="other" checked="checked"> Other
+      </div>
+      Time: <input type="time" id="time" >
+      <button type="button" id="event_btn" class="btn btn-primary btn-xs">Submit</button>
+      <button type="button" id="cancel_btn" class="btn btn-default btn-xs">Cancel</button>
+      <br>
+    </div>
+
+
+    <!-- edit event here -->
+    <div id="editevent" hidden="hidden">
+      Edit Event: <span id="editdate"></span>
+      <br>
+      <textarea id="edittitle" rows="8" cols="80" placeholder="Your event here"></textarea>
+      <div id="edit_radiobuttons">
+        <input type="radio" class="edit_tag_radio" name="edit_tag" value="entertainment"> Entertainment &nbsp;
+        <input type="radio" class="edit_tag_radio" name="edit_tag" value="work"> Work &nbsp;
+        <input type="radio" class="edit_tag_radio" name="edit_tag" value="personal"> Personal &nbsp;
+        <input type="radio" class="edit_tag_radio" name="edit_tag" value="other"> Other
+      </div>
+      Time: <input type="time" id="edittime" >
+      <input type="hidden" id= "eid">
+      <button type="button" id="editevent_btn" class="btn btn-primary btn-xs">Submit</button>
+      <button type="button" id="editcancel_btn" class="btn btn-default btn-xs">Cancel</button>
+    </div>
+
+
+    <script src="display.js" charset="utf-8"></script>
+    <script type="text/javascript" src="ajax.js"></script> <!-- load the JavaScript file -->
+  </body>
+</html>
